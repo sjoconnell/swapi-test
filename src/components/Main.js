@@ -1,8 +1,9 @@
 import React from 'react';
 import MovieCard from './MovieCard';
 
-const createGroupedArray = function(arr, chunkSize) {
-    var groups = [], i;
+const createGroupedArray = (arr, chunkSize) => {
+    const groups = [];
+    let i;
     for (i = 0; i < arr.length; i += chunkSize) {
         groups.push(arr.slice(i, i + chunkSize));
     }
@@ -12,7 +13,6 @@ const createGroupedArray = function(arr, chunkSize) {
 const Main = ({ films = [] }) => {
   return (
     <div className="main">
-      <h1>Main!</h1>
       {
         createGroupedArray(films, 2)
           .map((filmGroup, index) => <MovieCard filmGroup={filmGroup}  key={index}/>)

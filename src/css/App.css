@@ -1,0 +1,66 @@
+body {
+  background-color: white;
+}
+
+.App {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/*MAIN*/
+.main { 
+  border: 3px solid red;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movieCard {
+  border: 3px solid green;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  padding: 5px;
+}
+
+.movie {
+  border: 3px solid purple;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.movie-image {
+  width: 100%;
+  height: 60%;
+}
+
+.movie-characters {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+.movie-characters-image {
+  height: 100%;
+  flex-grow: 1;
+}
+
+/*SIDEBAR*/
+.sidebar {
+  border: 3px solid yellow;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 10px;
+  min-width: 350px;
+}
+
+.xAxis tspan {
+  font-size: 8px;
+  font-weight: bold;
+}
