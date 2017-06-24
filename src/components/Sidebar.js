@@ -1,4 +1,5 @@
 import React from 'react';
+import Character from './Character';
 import ScrawlChart from './ScrawlChart';
 
 const wordCount = (allFilms) => {
@@ -19,7 +20,8 @@ const Sidebar = ({films = []}) => {
 
   return (
     <div className="sidebar">
-      
+      <Character />
+      <Character />
       <ScrawlChart chartData={chartData} />
     </div>
   )

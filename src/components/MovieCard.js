@@ -7,6 +7,12 @@ const MovieCard = ({filmGroup = []}) => {
       {
         filmGroup.map(film => <Movie film={film} key={film.episode_id} />)
       }
+      {
+        filmGroup.length < 2 &&
+        <div className="movie-none">
+          <img className="" src={require('../css/images/lightsaber2.png')} alt="lightsaber"/>
+        </div>
+      }
     </div>
   )
 }

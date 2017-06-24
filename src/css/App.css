@@ -45,6 +45,16 @@ html, body, #root {
   justify-content: space-between;
 }
 
+.movie-none{
+  width: 50%;
+  border: 1px solid black;
+}
+
+.movie-none img {
+  height: 100%;
+  width: 100%
+}
+
 .movie-image {
   width: 100%;
   height: 240px;
@@ -88,11 +98,14 @@ html, body, #root {
 
 /*SIDEBAR*/
 .sidebar {
+  text-align: center;
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
   min-width: 400px;
+  background-color: darkmagenta;
 }
 
 .xAxis tspan {
