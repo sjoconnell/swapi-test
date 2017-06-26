@@ -4,6 +4,7 @@ import { VictoryBar, VictoryChart } from 'victory';
 const ScrawlChart = ({chartData = []}) => {
   return (
     <div className="scrawlChart">
+    { 
       <VictoryChart>
         <VictoryBar
           data={chartData}
@@ -11,6 +12,7 @@ const ScrawlChart = ({chartData = []}) => {
           y="wordCount"
         />
       </VictoryChart>
+    }
     </div>
   )
 }

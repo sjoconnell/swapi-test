@@ -1,7 +1,6 @@
-
 html, body, #root {
   height: 100%;
-  font-family: "Starjedi";
+  font-family: "StarWars";
 }
 
 .App {
@@ -10,19 +9,22 @@ html, body, #root {
 }
 
 @font-face {
-  font-family: "Starjedi";
-  src: url("./fonts/Starjedi.ttf");
+  font-family: "StarWars";
+  src: url("./fonts/STARWARS.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*MAIN*/
 .main { 
   min-height: 100%;
-  flex-grow: 1;
   padding: 10px;
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-between;
   background: url('./images/stars2.jpg');
+  align-content: flex-start;
 }
 
 .movieCard {
@@ -66,6 +68,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-size: 17px;
 }
 
 .movie-characters {
@@ -84,10 +87,11 @@ html, body, #root {
   position: absolute;
   display: none;
   background-color: gainsboro;
+  font-size: 14px;
 }
 
 .movie-characters-container:hover .movie-characters-container-hover {
-  display: block
+  display: block;
 }
 
 .movie-characters-image {
@@ -101,14 +105,51 @@ html, body, #root {
   text-align: center;
   min-height: 100%;
   display: flex;
+  flex-grow: 0;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
   min-width: 400px;
-  background-color: darkmagenta;
+  max-width: 400px;
+  background-color: blue;
 }
 
-.xAxis tspan {
-  font-size: 8px;
-  font-weight: bold;
+.character {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+
+.character-image {
+  height: 100%;
+  width: 100%;
+}
+
+.character-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.character:hover .character-overlay {
+  opacity: 1;
+}
+
+.character-overlay-text {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  line-height: 125%;
+}
+
+.scrawlChart {
+  height: 360px;
 }

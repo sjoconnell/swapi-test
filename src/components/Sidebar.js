@@ -14,14 +14,14 @@ const wordCount = (allFilms) => {
   })
 }
 
-const Sidebar = ({films = []}) => {
+const Sidebar = ({films = [], fav = {}, least = {}}) => {
 
   const chartData = wordCount(films);
 
   return (
     <div className="sidebar">
-      <Character />
-      <Character />
+      <Character character={fav} favorite={true} />
+      <Character character={least} favorite={false} />
       <ScrawlChart chartData={chartData} />
     </div>
   )

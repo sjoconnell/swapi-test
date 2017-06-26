@@ -2,13 +2,13 @@ import React from 'react';
 
 const getCharacters = (id) => {
   const characters = {
-    1: ['anakin', 'amidala', 'maul'],
-    2: ['anakin', 'amidala', 'yoda'],
-    3: ['anakin', 'amidala', 'yoda'],
-    4: ['luke', 'leia', 'han'],
-    5: ['luke', 'vader', 'yoda'],
-    6: ['luke', 'vader', 'leia'],
-    7: ['rey', 'finn', 'kylo']
+    1: ['Anakin Skywalker', 'Padmé Amidala', 'Darth Maul'],
+    2: ['Anakin Skywalker', 'Padmé Amidala', 'Yoda'],
+    3: ['Anakin Skywalker', 'Padmé Amidala', 'Yoda'],
+    4: ['Luke Skywalker', 'Leia Organa', 'Han Solo'],
+    5: ['Luke Skywalker', 'Darth Vader', 'Yoda'],
+    6: ['Luke Skywalker', 'Darth Vader', 'Leia Organa'],
+    7: ['Rey', 'Finn', 'Kylo Ren']
   }
   return characters[id]
 }
