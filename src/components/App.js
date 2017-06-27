@@ -13,7 +13,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    axios.all([axios.get('http://swapi.co/api/films/'), axios.get('http://swapi.co/api/people/20'), axios.get('http://swapi.co/api/people/44')])
+    axios.all([axios.get('https://swapi.co/api/films/'), axios.get('https://swapi.co/api/people/20'), axios.get('https://swapi.co/api/people/44')])
       .then(axios.spread((films, fav, least) => {
         this.setState({
           films: films.data.results,
