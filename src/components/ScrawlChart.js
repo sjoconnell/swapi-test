@@ -1,5 +1,4 @@
 import React from 'react';
-import { VictoryBar, VictoryChart } from 'victory';
 
 const ScrawlChart = ({chartData = []}) => {
   return (
