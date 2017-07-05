@@ -13,16 +13,21 @@ const getCharacters = (id) => {
   return characters[id]
 }
 
-const Movie = ({film}) => {
+const Movie = ({ film = {} }) => {
   return (
     <div className="movie">
+    { film.title ?
       <img className="movie-image" src={require(`../css/images/${film.title}.jpeg`)} alt={film.title}/>
+      :
+      <img className="movie-image" src={require("../css/images/bb8.jpg")} alt="BB8" />
+    }
       <div className="movie-info">
         <h1 className="movie-info-title">{film.title}</h1>
         <h2 className="movie-info-director">{film.director}</h2>
       </div>
       <div className="movie-characters">
         {
+          film.episode_id &&
           getCharacters(film.episode_id)
             .map(character =>
               <div className="movie-characters-container" key={character}>
